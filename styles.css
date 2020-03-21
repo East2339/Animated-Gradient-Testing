@@ -1,0 +1,172 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  text-align: center;
+  margin: 3% 50px 0;
+  background: linear-gradient(0deg, #000, #262626);
+  padding: 20px;
+  border-radius: 3px;
+}
+li{
+  display: inline-block;
+  margin: 0 63px;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+  font-family: consolas;
+  font-size: 18px;
+  padding: 3px;
+}
+/* a::before{
+  content: '';
+  position: absolute;
+  top: 1.8%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+} */
+a:hover{
+  border: solid 2px currentColor;
+  border-radius: 3px;
+  transition-duration: 200ms;
+  animation: shadow 50s linear infinite;
+  background-size: 500%;
+}
+
+body{
+  background: #000;
+  position: relative;
+}
+p{
+  color: #fff;
+  font-family: consolas;
+  margin: 20px;
+}
+h2{
+  color: #fff;
+  font-family: consolas;
+  font-size: 2.6em;
+  letter-spacing: .2em;
+  text-align: center;
+  margin-top: 2em;
+}
+h4{
+  color: #fff;
+  font-family: consolas;
+  margin: 2em 0;
+  letter-spacing: .2em;
+  text-align: center;
+}
+.loremContainer{
+  margin: 50px;
+  /* box-shadow: 5px 5px 5px 2px linear-gradient(to top, #008aff, #00ffe7); */
+  background: linear-gradient(0deg, #000, #262626);
+  color:#f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 3px;
+}
+/* .shadow:before{
+  content:'';
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 7%;
+  left: 3.4%;
+  width:calc(93% + 4px);
+  height:calc(150% + 4px);
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 600%;
+  z-index:-1;
+  animation: shadow 25s linear infinite;
+  border-radius: 3px;
+} */
+.shadow:after {
+  content:'';
+  position: absolute;
+  top:-2px;
+  left: 20px;
+  width:calc(100% + 4px);
+  height:calc(100% + 4px);
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 400%;
+  z-index:-1;
+  animation: shadow 20s linear infinite;
+}
+.shadow:after {
+  position: absolute;
+  top:-8px;
+  left: 20px;
+  width:calc(95% + 8px);
+  height:calc(100% + 8px);    
+  filter:blur(24px);
+  opacity:0.9;
+}
+@keyframes shadow {
+  0% {
+    background-position: 0 0;
+  }
+  50.01% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+::-webkit-scrollbar
+{
+  width: 0;
+}
+#scrollPath{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+#progressBar{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 10px;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  animation: animate 5s linear infinite;
+}
+@keyframes animate
+{
+  0%, 100%
+  {
+    filter: hue-rotate(0deg);
+  }
+  50%
+  {
+    filter: hue-rotate(420deg);
+  }
+}
+#progressBar:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(30px);
+}
+#progressBar:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(30px);
+}
